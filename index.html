@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A professional-level web page showcasing a simple interactive feature.">
+    <meta name="author" content="Your Name">
+    <title> Web Page</title>
+    <style>
+        /* CSS Section */
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #333;
+            --background-color: #f4f4f9;
+            --text-color: #333;
+            --button-hover-color: #45a049;
+            --border-radius: 8px;
+        }
+
+        /* Resetting Default Margins */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        main p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: var(--border-radius);
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--button-hover-color);
+        }
+
+        #message {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            main p, #message {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML Section -->
+    <header>
+        <h1>Welcome to Cloud Ambassadors</h1>
+        <p>Created By Lalit_Jadaun.</p>
+    </header>
+
+    <main>
+        <p>Click the button below to see a message.</p>
+        <button onclick="showMessage()">Show Message</button>
+        <p id="message"></p>
+    </main>
+
+    <footer>
+        <p>&copy; Created By Lalit Jadaun For Cloud Ambassadors</p>
+    </footer>
+
+    <script>
+        // JavaScript Section
+        function showMessage() {
+            const messageElement = document.getElementById("message");
+            messageElement.textContent = "Thank you for visiting! Have a great day!";
+        }
+    </script>
+</body>
+</html>
